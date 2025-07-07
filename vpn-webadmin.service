@@ -1,0 +1,13 @@
+[Unit]
+Description=VPN Web Admin
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bot/web_admin
+ExecStart=/root/bot/web_admin/venv/bin/python3 /root/bot/web_admin/run.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
